@@ -6,13 +6,19 @@ use Illuminate\Http\Request;
 
 class StaticPageController extends Controller
 {
-    public function home()
+    public function index()
     {
 
     }
 
-    public function show($id)
+    public function privacy()
     {
+      return view('staticpages.privacy');
 
+    }
+
+    public function faq()
+    {
+        return view('staticpages.faq');
     }
 }

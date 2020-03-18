@@ -1,10 +1,16 @@
+@include('layouts.partials._header')
 
-      <header>
+{{-- main --}}
+<main>
+  @yield('main')
+</main>
+{{-- /main --}}
 
-      </header>
-      <main>
+{{-- footer --}}
+<footer>
+ @yield('footer')
+</footer>
+{{-- /footer --}}
+@yield('scripts')
 
-      </main>
-      <footer>
-
-      </footer>
+@include('layouts.partials._footer')

@@ -17,10 +17,16 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-//static page
-Route::get('/', 'StaticPageController@home')->name('static_page.home');
+// static pages
+Route::get('/', 'StaticPageController@index')->name('static_page.home');
+Route::get('/faq', 'StaticPageController@faq')->name('static_page.faq');
+Route::get('/privacy', 'StaticPageController@privacy')->name('static_page.privacy');
+
+// students
+Route::get('/carriere', 'StudentController@index')->name('student.index');
 
 
-//students
-Route::get('/students', 'StudentPageController@home')->name('students');
-Route::get('/students/show/{id}', 'StudentPageController@show')->name('students');
+
+Route::get('/carriere/studente/{slug}', 'StudentController@show')->name('student.show');
+
+Route::get('/carriere/studente/id/{id}', 'StudentController@getById')->name('student.showId');
